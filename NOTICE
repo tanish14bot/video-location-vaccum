@@ -1,0 +1,35 @@
+video-location-vaccum
+Copyright 2026 video-location-vaccum contributors
+
+Project license
+---------------
+The original project code and documentation are licensed under the video-location-vaccum
+Research-Only License, Version 1.0. See LICENSE. Third-party components retain
+their own licenses, listed below.
+
+This product includes software developed by third parties:
+
+1. cangjie-skill (MIT License)
+   https://github.com/kangarooking/cangjie-skill
+   Used as the build tool that produced the agent skill under skills/.
+
+2. Scrapling (BSD 3-Clause License)
+   https://github.com/D4Vinci/Scrapling
+   Optional data-acquisition engine documented in docs/DATA_SOURCES.md.
+
+3. claude-video / watch (see upstream repository for its license)
+   https://github.com/bradautomates/claude-video
+   Optional evidence-extraction helper used by the triage stage.
+
+Third-party code
+----------------
+Prior-art projects are listed in docs/PRIOR_ART.md. No code was copied from
+projects without a compatible license. Portions of the spectrogram whitening,
+guided Viterbi tracer, and detector were adapted from doppler-locate (MIT),
+Copyright (c) 2026 digitalis-p.
+
+Data attribution
+----------------
+This project does not bundle flight, terrain, or imagery data. Users are
+responsible for obtaining data under the terms of the relevant provider.
+See docs/DATA_SOURCES.md for per-source licensing notes.

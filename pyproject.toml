@@ -1,0 +1,83 @@
+[build-system]
+requires = ["hatchling>=1.24"]
+build-backend = "hatchling.build"
+
+[project]
+name = "video-location-vaccum"
+version = "0.1.0a0"
+description = "High-assurance geolocation from aircraft Doppler signatures in ordinary audio."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "video-location-vaccum contributors" }]
+keywords = ["geolocation", "doppler", "ads-b", "acoustics", "osint", "forensics"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "License :: Free for non-commercial use",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "pandas>=2.2",
+  "pydantic>=2.6",
+  "typer>=0.12",
+  "rich>=13.7",
+  "httpx>=0.27",
+  "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+audio = ["soundfile>=0.12"]
+geo = ["rasterio>=1.3"]
+parquet = ["pyarrow>=15"]
+clues = ["mutagen>=1.47"]
+dev = [
+  "pytest>=8.0",
+  "pytest-cov>=5.0",
+  "ruff>=0.5",
+  "mypy>=1.10",
+]
+
+[project.urls]
+Homepage = "https://github.com/tanish14bot/video-location-vaccum"
+Issues = "https://github.com/tanish14bot/video-location-vaccum/issues"
+
+[project.scripts]
+video-location-vaccum = "video_location_vaccum.cli:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/video_location_vaccum"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+extend-exclude = ["src/video_location_vaccum/vendor"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM", "RUF"]
+ignore = ["B008", "N818"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["E501"]
+
+[tool.mypy]
+python_version = "3.10"
+strict = false
+check_untyped_defs = true
+plugins = ["pydantic.mypy"]
+ignore_missing_imports = true
+warn_unused_configs = true
+warn_return_any = false
+exclude = ["src/video_location_vaccum/vendor"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = ["slow: end-to-end tests that take more than a few seconds"]

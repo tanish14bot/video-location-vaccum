@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "video-location-vaccum: high-assurance geolocation from aircraft Doppler signatures"
+abstract: >-
+  A reproducible method and reference implementation for inverting aircraft
+  Doppler signatures in ordinary audio into a ranked, uncertainty-quantified
+  location estimate, with an evidence-triage gate, data-source fallbacks, and
+  explicit precision limits.
+version: 0.1.0a0
+date-released: 2026-11-04
+license: "other"
+license-url: "https://github.com/tanish14bot/video-location-vaccum/blob/main/LICENSE"
+type: software
+authors:
+  - name: "video-location-vaccum contributors"
+repository-code: "https://github.com/tanish14bot/video-location-vaccum"
+keywords:
+  - doppler
+  - geolocation
+  - ads-b
+  - acoustics
+  - osint
+  - forensics
+references:
+  - type: article
+    title: "Localization and Observability of Aircraft via Doppler Shifts"
+    authors:
+      - name: "Torney, D. C."
+    journal: "IEEE Transactions on Aerospace and Electronic Systems"
+    volume: 43
+    issue: 3
+    year: 2007

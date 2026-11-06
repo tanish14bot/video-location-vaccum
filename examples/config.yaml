@@ -1,0 +1,82 @@
+# Example run configuration.
+# Copy, fill every empty field, and record unknowns explicitly.
+
+input:
+  video: clip.mp4
+  audio: null
+  question: "Where was this filmed?"
+
+triage:
+  mode: auto            # auto | visual | doppler | forensic
+  min_confidence: 0.90
+  force_pipeline: false
+  ignore_visuals: false
+  evidence_file: runs/case/evidence.json
+  max_frames: 120
+  frame_width: 1024
+
+search:
+  region:
+    name: "example region"
+    min_lat: 39.0
+    min_lon: -106.0
+    max_lat: 40.0
+    max_lon: -105.0
+  date: "2026-01-01"
+  date_end: null
+  t_start_utc: null
+  t_start_epoch_s: null
+  timezone: "UTC"
+  c_mps: 343.0
+  r_audible_m: 10000.0
+  grid_step_m: 200.0
+  refine_step_m: 100.0
+  type_filter: all       # all | props | jets | turboprops
+  dt_tol_s: 5.0
+  silence_min_gap_s: null
+  silence_max_signal_db: null
+  sweep_t_s: 5.0
+  sweep_f0_pct: 5.0
+  max_candidates: null
+
+events:
+  - id: 1
+    t_heard_s: 0.0
+    f0_hz: 0.0
+    f0_sigma_hz: 0.0
+    velocity_band_mps: null
+    slant_band_m: null
+    fit_quality: unknown
+    times_s: null
+    freqs_hz: null
+  - id: 2
+    t_heard_s: 0.0
+    f0_hz: 0.0
+    f0_sigma_hz: 0.0
+    velocity_band_mps: null
+    slant_band_m: null
+    fit_quality: unknown
+    times_s: null
+    freqs_hz: null
+
+flights:
+  preferred: user_file
+  user_file: null
+  altitude_unit: ft
+  cache_dir: .cache/flights
+  allow_network: true
+  opensky_client_id: null
+  opensky_client_secret: null
+  allow_mirrors: true
+  ask_on_missing: true
+
+dem:
+  preferred: user_file
+  user_file: null
+  cache_dir: .cache/dem
+  allow_network: true
+  product: copernicus-glo30
+  ask_on_missing: true
+  allow_flat_fallback: false
+
+output_dir: runs/case

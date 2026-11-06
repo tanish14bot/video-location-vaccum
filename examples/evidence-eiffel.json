@@ -1,0 +1,30 @@
+{
+  "claim_place": "Eiffel Tower, Paris",
+  "precision": "city",
+  "requested_precision": "city",
+  "mode": "exploration",
+  "candidates_examined": 3,
+  "target_is_private_individual": false,
+  "authenticity_disputed": false,
+  "ai_geolocator_sole_basis": false,
+  "reference_imagery_undated": false,
+  "landmark_replicas_not_excluded": false,
+  "has_cross_source": true,
+  "gates": {
+    "provenance": "pass",
+    "authenticity": "pass",
+    "uniqueness": "pass",
+    "temporal": "pass",
+    "negative_control": "pass",
+    "precision_discipline": "pass",
+    "integrity": "pass"
+  },
+  "evidence": [
+    {"kind": "unique_landmark", "score": 1.0, "note": "tower geometry consistent from two viewpoints"},
+    {"kind": "micro_cue", "score": 0.9, "note": "street furniture and signage match Paris"},
+    {"kind": "reference_imagery", "score": 0.9, "note": "street-level imagery dated 2025"},
+    {"kind": "terrain", "score": 0.6, "note": "river bank and bridge line"},
+    {"kind": "chronolocation", "score": 0.8, "note": "shadow consistent with the stated time"},
+    {"kind": "independent_corroboration", "score": 0.8, "note": "second uploader, different angle"}
+  ]
+}

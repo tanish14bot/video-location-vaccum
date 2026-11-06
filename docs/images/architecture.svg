@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">video-location-vaccum pipeline</title>
+  <desc id="desc">Evidence triage feeds acoustic event detection, flight and terrain data feed a Doppler model, locked scoring produces a ranked point, and a separate defense path checks or transforms a recording.</desc>
+
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#0f172a" flood-opacity="0.10"/>
+    </filter>
+    <style>
+      .title { font: 700 28px "Segoe UI", Arial, sans-serif; fill: #0f172a; }
+      .subtitle { font: 400 14px "Segoe UI", Arial, sans-serif; fill: #64748b; }
+      .lane { font: 700 12px "Segoe UI", Arial, sans-serif; fill: #64748b; letter-spacing: 1.2px; }
+      .box-title { font: 600 15px "Segoe UI", Arial, sans-serif; fill: #0f172a; }
+      .box-sub { font: 400 11.5px "Segoe UI", Arial, sans-serif; fill: #475569; }
+      .note { font: 400 12px "Segoe UI", Arial, sans-serif; fill: #64748b; }
+      .box { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; }
+      .box-teal { fill: #ecfdf5; stroke: #5eead4; }
+      .box-amber { fill: #fffbeb; stroke: #fcd34d; }
+      .box-navy { fill: #0f172a; stroke: #0f172a; }
+      .box-navy-title { fill: #f8fafc; }
+      .box-navy-sub { fill: #cbd5e1; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="560" rx="22" fill="#f8fafc"/>
+  <text x="42" y="48" class="title">video-location-vaccum pipeline</text>
+  <text x="42" y="72" class="subtitle">evidence first · named data sources · uncertainty carried through scoring</text>
+
+  <!-- top stage lane -->
+  <text x="42" y="112" class="lane">ACOUSTIC PATH</text>
+
+  <g filter="url(#shadow)">
+    <rect class="box box-teal" x="42" y="126" width="160" height="66" rx="13"/>
+    <text x="122" y="153" text-anchor="middle" class="box-title">Intake</text>
+    <text x="122" y="173" text-anchor="middle" class="box-sub">scope · precision · consent</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="232" y="126" width="160" height="66" rx="13"/>
+    <text x="312" y="153" text-anchor="middle" class="box-title">Evidence triage</text>
+    <text x="312" y="173" text-anchor="middle" class="box-sub">frames · metadata · signals</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="422" y="126" width="160" height="66" rx="13"/>
+    <text x="502" y="153" text-anchor="middle" class="box-title">Event detection</text>
+    <text x="502" y="173" text-anchor="middle" class="box-sub">matched filter · ridge trace</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box box-navy" x="612" y="126" width="160" height="66" rx="13"/>
+    <text x="692" y="153" text-anchor="middle" class="box-title box-navy-title">Doppler model</text>
+    <text x="692" y="173" text-anchor="middle" class="box-sub box-navy-sub">emission time · slant range</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="802" y="126" width="160" height="66" rx="13"/>
+    <text x="882" y="153" text-anchor="middle" class="box-title">Locked scoring</text>
+    <text x="882" y="173" text-anchor="middle" class="box-sub">one clock · per-event f0</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box box-amber" x="992" y="126" width="160" height="66" rx="13"/>
+    <text x="1072" y="153" text-anchor="middle" class="box-title">Ranked point</text>
+    <text x="1072" y="173" text-anchor="middle" class="box-sub">confidence · error budget</text>
+  </g>
+
+  <g stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)">
+    <line x1="204" y1="159" x2="228" y2="159"/>
+    <line x1="394" y1="159" x2="418" y2="159"/>
+    <line x1="584" y1="159" x2="608" y2="159"/>
+    <line x1="774" y1="159" x2="798" y2="159"/>
+    <line x1="964" y1="159" x2="988" y2="159"/>
+  </g>
+
+  <!-- data lane -->
+  <text x="42" y="242" class="lane">DATA LAYER</text>
+  <text x="42" y="262" class="note">user file → cache → keyed API → free archive → ask the user</text>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="422" y="286" width="160" height="60" rx="13"/>
+    <text x="502" y="312" text-anchor="middle" class="box-title">Flight tracks</text>
+    <text x="502" y="330" text-anchor="middle" class="box-sub">ADS-B · altitude · velocity</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="612" y="286" width="160" height="60" rx="13"/>
+    <text x="692" y="312" text-anchor="middle" class="box-title">Terrain</text>
+    <text x="692" y="330" text-anchor="middle" class="box-sub">DEM · vertical datum</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="802" y="286" width="160" height="60" rx="13"/>
+    <text x="882" y="312" text-anchor="middle" class="box-title">Atmosphere</text>
+    <text x="882" y="330" text-anchor="middle" class="box-sub">wind · temperature aloft</text>
+  </g>
+
+  <g stroke="#475569" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)">
+    <path d="M 502 284 L 502 230 L 680 230 L 680 196"/>
+    <path d="M 692 284 L 692 230 L 692 196"/>
+    <path d="M 882 284 L 882 230 L 704 230 L 704 196"/>
+  </g>
+
+  <!-- defense lane -->
+  <line x1="42" y1="386" x2="1158" y2="386" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="42" y="414" class="lane">DEFENSE PATH · YOUR OWN RECORDINGS OR AUTHORIZED CONTENT</text>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="42" y="432" width="230" height="60" rx="13"/>
+    <text x="157" y="458" text-anchor="middle" class="box-title">Leakage check</text>
+    <text x="157" y="476" text-anchor="middle" class="box-sub">is a Doppler signature present?</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="322" y="432" width="260" height="60" rx="13"/>
+    <text x="452" y="458" text-anchor="middle" class="box-title">Transform</text>
+    <text x="452" y="476" text-anchor="middle" class="box-sub">notch · cut · mask · decoy</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect class="box" x="632" y="432" width="230" height="60" rx="13"/>
+    <text x="747" y="458" text-anchor="middle" class="box-title">Manifest</text>
+    <text x="747" y="476" text-anchor="middle" class="box-sub">hash · transform · limits</text>
+  </g>
+
+  <g stroke="#475569" stroke-width="1.6" marker-end="url(#arrow)">
+    <line x1="274" y1="462" x2="318" y2="462"/>
+    <line x1="584" y1="462" x2="628" y2="462"/>
+  </g>
+
+  <text x="900" y="468" class="note">high-pass, drowning-out, and phone compression</text>
+  <text x="900" y="486" class="note">do not remove the curve; cuts and masking help.</text>
+</svg>

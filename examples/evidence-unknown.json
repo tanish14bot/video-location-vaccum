@@ -1,0 +1,26 @@
+{
+  "claim_place": null,
+  "precision": "country",
+  "requested_precision": "street",
+  "mode": "exploration",
+  "candidates_examined": 40,
+  "target_is_private_individual": false,
+  "authenticity_disputed": false,
+  "ai_geolocator_sole_basis": true,
+  "reference_imagery_undated": true,
+  "landmark_replicas_not_excluded": false,
+  "has_cross_source": false,
+  "gates": {
+    "provenance": "unknown",
+    "authenticity": "unknown",
+    "uniqueness": "unknown",
+    "temporal": "unknown",
+    "negative_control": "unknown",
+    "precision_discipline": "unknown",
+    "integrity": "unknown"
+  },
+  "evidence": [
+    {"kind": "terrain", "score": 0.3, "note": "generic hills"},
+    {"kind": "micro_cue", "score": 0.2, "note": "unreadable signage"}
+  ]
+}

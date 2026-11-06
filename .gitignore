@@ -1,0 +1,40 @@
+# --- third-party media and data (never ship) ---
+watch-out/
+smoke/
+*.mp4
+*.webm
+*.mkv
+*.mov
+*.wav
+*.flac
+*.m4a
+*.jpg
+*.jpeg
+*.png
+!docs/**/*.png
+
+# --- caches and build output ---
+.cache/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+__pycache__/
+*.pyc
+
+# --- local run artifacts ---
+runs/
+outputs/
+*.log
+.env
+.env.*
+!.env.example
+
+# --- research inputs kept locally ---
+video-location-vaccum-work/
+tools/
+transcript-full.txt
