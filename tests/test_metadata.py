@@ -32,4 +32,4 @@ def test_extract_metadata_plain_wav(tmp_path: Path) -> None:
     sf.write(path, [0.0] * 800, 8000)
     report = extract_metadata(path)
     assert "notes" in report.to_dict()
-    assert report.sources
+    assert "riff" in report.sources
