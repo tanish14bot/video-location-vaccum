@@ -149,6 +149,8 @@ def extract_metadata(path: Path) -> MetadataReport:
 
     if path.suffix.lower() == ".wav":
         chunks = _riff_chunks(path)
+        if chunks:
+            report.sources.append("riff")
         if b"bext" in chunks:
             report.bwf = parse_bext(chunks[b"bext"])
             report.sources.append("bwf-bext")
